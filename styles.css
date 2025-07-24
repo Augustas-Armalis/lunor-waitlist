@@ -143,9 +143,10 @@ h1 {
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
-  letter-spacing: -1.28px;
+  letter-spacing: -0.8px;
   margin: 0px;
   margin-bottom: 42px;
+  width: 103%;
 
 }
 
@@ -158,7 +159,7 @@ h1 {
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
-  letter-spacing: -1.28px;
+  letter-spacing: -0.8px;
   margin: 0px;
   margin-bottom: 42px;
 }
