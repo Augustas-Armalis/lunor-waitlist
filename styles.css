@@ -1,0 +1,236 @@
+body {
+  background-color: #000;
+}
+
+input {
+  width: 100%;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #1D1D20;
+  background: #141415;
+  box-sizing: border-box;
+  padding-left: 14px;
+  color: #ffffff;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s ease;
+}
+
+input::placeholder {
+  color: #AFAFB6;
+  opacity: 1;   /* ensure it's fully visible */
+}
+
+input:focus {
+  outline: none;
+  border-color: #313131;       
+  background: #18181b;          
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s ease;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #141415 inset !important; /* match your bg */
+  box-shadow: 0 0 0 1000px #141415 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+  border-color: #313131 !important; /* match your focus border if you want */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.sub-button {
+  width: 100%;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #FFF;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  border: none;
+  margin: 0px;
+
+  transition: all 0.2s ease;
+
+  
+}
+
+.sub-button:hover {
+  background: #dfdfe4;
+  transition: all 0.2s ease;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.text-mobile-container{
+  width: 100%;
+  max-width: 300px;
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -1.28px;
+  margin: 0px;
+  margin-bottom: 42px;
+
+}
+
+
+.popup-title{
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -1.28px;
+  margin: 0px;
+  margin-bottom: 42px;
+}
+
+p{
+  color: #666670;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.64px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container-after-subscribtion {
+  margin-top: 24px;
+  padding: 24px 0 0 0;
+}
+
+.lottie-success, .lottie-error {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 12px auto;
+}
+
+#carousel-container {
+  width: 100%;
+  max-width: 800px;
+  height: fit-content;
+  aspect-ratio: 1440/890;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #18181b;
+  border: 1px solid #1D1D20;
+  border-radius: 12px;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 16px;
+}
+
+.carousel-image.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+.hover-bright {
+  transition: all 0.2s ease;
+}
+
+.hover-bright:hover {
+  filter: brightness(1.2);
+  transition: all 0.2s ease;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-box {
+  background: #0B0B0C;
+  border-radius: 18px;
+  border: 1px solid #1D1D20;
+  padding: 32px 32px 16px 32px;
+  min-width: 320px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lottie-success, .lottie-error {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 24px;
+}
+
+.popup-box h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .popup-box {
+    min-width: 0;
+    padding: 32px 8vw 32px 8vw;
+  }
+  .lottie-success, .lottie-error {
+    width: 64px;
+    height: 64px;
+  }
+  .popup-box h1 {
+    font-size: 1.2rem;
+  }
+}
